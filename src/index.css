@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  /* Direction visuelle validée avec Maxime : couleurs/formes de "Dynamique Sportif",
+     typographie d'"Épuré Premium" (cf. decisions.md #12). Couleurs alignées sur le vrai
+     logo de Maxime depuis le 06/10 (cf. decisions.md #16). Police d'affichage passée à
+     Montserrat le 07/10 — alternative gratuite à Gotham (police du logo) en attendant
+     une éventuelle licence officielle (cf. decisions.md #16). */
+  --color-brand-blue: #00172d;
+  --color-brand-green: #48b66b;
+  --color-brand-mint: #eef7f1;
+  --color-brand-border: #dce9e0;
+
+  --font-display: 'Montserrat', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Montserrat', system-ui, -apple-system, sans-serif;
+
+  /* Arrondis plus généreux que le look "épuré" pur, hérités du look "dynamique" */
+  --radius-sm: 10px;
+  --radius-lg: 22px;
+}
+
+body {
+  @apply bg-white text-slate-900 antialiased;
+  font-family: var(--font-sans);
+}
+
+/* Gras conservé sur les titres (cf. decisions.md #16 — on garde tailles/gras/couleurs
+   en changeant uniquement la police). */
+.font-display {
+  font-weight: 700;
+  text-wrap: balance;
+}
